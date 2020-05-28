@@ -25,7 +25,7 @@ const Navbar = props => {
         <div className='navbar-brand'>
           <Link href='/'>
             <figure className='image is-128x128'>
-              <img src='/logo2.png' alt='logo' />
+              <img src='/logo.png' alt='logo' />
             </figure>
           </Link>
           <span
