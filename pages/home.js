@@ -10,14 +10,13 @@ import { getRestaurantsData } from '../redux/selectors';
 const Home = () => {
   const dispatch = useDispatch();
   const restaurantsData = useSelector(getRestaurantsData);
-  console.log('restaurantsData inicial: ', restaurantsData);
 
   /*
    * Use 'useEffect' to get Melp data
    */
   useEffect(() => {
     dispatch(getMelpRestaurantsData());
-    console.log('termino useEffect');
+    console.log('restaurantsData antes de return: ', restaurantsData);
   }, [restaurantsData]);
 
   /*
@@ -30,12 +29,11 @@ const Home = () => {
     { href: '/tacos', text: 'tacos', color: 'is-link' },
     { href: '/vegetariano', text: 'vegetariano', color: 'is-danger' },
   ];
-  console.log('restaurantsData antes de return: ', restaurantsData);
 
   return (
     <Layout>
       <Fade right>
-        <section id='home' className={'section'}>
+        <section id='home' className={'section .m-t-xxl'}>
           <div className='container'>
             <h2 className='title is-2 is-spaced'>¡Bienvenid@!</h2>
             <h5 className='subtitle is-3 is-spaced'>
