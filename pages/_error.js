@@ -1,4 +1,6 @@
 import Router from 'next/router';
+import regeneratorRuntime from 'regenerator-runtime';
+
 import PropTypes from 'prop-types';
 
 const ErrorPage = ({ statusCode }) => (

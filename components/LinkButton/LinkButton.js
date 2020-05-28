@@ -7,7 +7,7 @@ const LinkButton = ({ href, text, color }) => (
   </Link>
 );
 
-Layout.propTypes = {
+LinkButton.propTypes = {
   href: PropTypes.string,
   text: PropTypes.string,
   color: PropTypes.string,

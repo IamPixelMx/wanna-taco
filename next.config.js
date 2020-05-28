@@ -36,20 +36,20 @@ const nextConfig = {
           },
         },
       },
-      {
-        test: /\.css$/,
-        use: [
-          // style-loader
-          { loader: 'style-loader' },
-          // css-loader
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-            },
-          },
-        ],
-      },
+      //   {
+      //     test: /\.css$/,
+      //     use: [
+      //       // style-loader
+      //       { loader: 'style-loader' },
+      //       // css-loader
+      //       {
+      //         loader: 'css-loader',
+      //         options: {
+      //           modules: true,
+      //         },
+      //       },
+      //     ],
+      //   },
       {
         test: /\.(png|jpg|jpeg|gif|woff)$/,
         use: [
@@ -71,15 +71,15 @@ const nextConfig = {
       },
     ];
 
-    // rules.forEach((rule) => {
-    //   config.module.rules.push(rule);
-    // });
+    rules.forEach(rule => {
+      config.module.rules.push(rule);
+    });
 
     // Config only for importing svg
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    });
+    // config.module.rules.push({
+    //   test: /\.svg$/,
+    //   use: ['@svgr/webpack'],
+    // });
 
     // Build objectwith environment variables
     const env = Object.keys(process.env).reduce((acc, curr) => {

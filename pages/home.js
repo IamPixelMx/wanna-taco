@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import regeneratorRuntime from 'regenerator-runtime';
+
 import { useDispatch, useSelector } from 'react-redux';
 import Fade from 'react-reveal/Fade';
 import { Layout, LinkButton } from 'components';

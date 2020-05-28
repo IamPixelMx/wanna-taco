@@ -1,7 +1,9 @@
-import { axios, API_BASE_URL } from 'utils';
+import axios from 'axios';
+
+const API_URL = process.env.MOCK_API_URL;
 
 export const getMelpData = async () => {
-  const melpData = await axios.get(API_BASE_URL);
+  const melpData = await axios.get(API_URL);
   console.log('Melp Data: ', melpData);
 
   return melpData;

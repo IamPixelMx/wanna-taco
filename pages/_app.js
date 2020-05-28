@@ -1,4 +1,6 @@
 import React from 'react';
+import 'regenerator-runtime/runtime.js';
+
 import { Provider } from 'react-redux';
 import App from 'next/app';
 // Redux modules

@@ -1,3 +1,7 @@
-import restaurants from './restaurants';
+import {
+  getMelpRestaurantsData,
+  getMelpRestaurantsDataError,
+  getMelpRestaurantsDataSuccess,
+} from './restaurantsActions';
 
-export { restaurants };
+export { getMelpRestaurantsData, getMelpRestaurantsDataError, getMelpRestaurantsDataSuccess };

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Router, { useRouter } from 'next/router';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 // import { cleanUsersMatch } from "../store/actions/users-actions";
 // import { cleanReposMatch } from "../store/actions/repositories-actions";
 import { Loader, Navbar } from 'components';
 
-const Layout = ({ children, dispatch }) => {
+const Layout = ({ children }) => {
   const router = useRouter();
+  const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -35,7 +36,6 @@ const Layout = ({ children, dispatch }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  dispatch: PropTypes.func.isRequired,
 };
 
-export default connect()(Layout);
+export default Layout;

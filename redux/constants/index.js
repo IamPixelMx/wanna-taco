@@ -2,7 +2,7 @@ import {
   GET_MELP_RESTAURANTS_DATA,
   GET_MELP_RESTAURANTS_DATA_ERROR,
   GET_MELP_RESTAURANTS_DATA_SUCCESS,
-} from './ActionTypes';
+} from './actionConstants';
 
 export {
   GET_MELP_RESTAURANTS_DATA,
