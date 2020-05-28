@@ -11,19 +11,19 @@
 <br />
 <p align="center">
   <a href="https://wanna-taco.now.sh/">
-    <img src="public/logo2.png" alt="Logo" width="145" height="145">
+    <img src="public/logo.png" alt="Logo" width="145" height="145">
   </a>
 
   <h3 align="center">Wanna Taco !?</h3>
 
   <p align="center">
 App de Melp que brinda información de los sitios culinarios con más sabor y estilo   <br />
-    <a href="https://github.com/eriika19/Wanna-taco-about-it-/tree/master/components"><strong>Explorar proyecto »</strong></a>
+    <a href="https://github.com/eriika19/wanna-taco/tree/master/components"><strong>Explorar proyecto »</strong></a>
     <br />
     <br />
     <a href="https://wanna-taco.now.sh/">Ir a Sitio</a>
     ·
-    <a href="https://github.com/eriika19/Wanna-taco-about-it-/issues">Reportar Problema</a>
+    <a href="https://github.com/eriika19/wanna-taco/issues">Reportar Problema</a>
     ·
   </p>
   <br />
