@@ -1,4 +1,4 @@
 # Ignore dir :
 node_modules
 .next
-*/__mocks__/api.js
+*/__mocks__/api/api.js

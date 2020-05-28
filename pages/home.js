@@ -10,12 +10,13 @@ import { getRestaurantsData } from '../redux/selectors';
 const Home = () => {
   const dispatch = useDispatch();
   const restaurantsData = useSelector(getRestaurantsData);
+  console.log('restaurantsData inicial: ', restaurantsData);
 
   /*
    * Use 'useEffect' to get Melp data
    */
   useEffect(() => {
-    // dispatch(getMelpRestaurantsData());
+    dispatch(getMelpRestaurantsData());
     console.log('termino useEffect');
   }, [restaurantsData]);
 
@@ -29,7 +30,7 @@ const Home = () => {
     { href: '/tacos', text: 'tacos', color: 'is-link' },
     { href: '/vegetariano', text: 'vegetariano', color: 'is-danger' },
   ];
-  console.log('restaurantsData: ', restaurantsData);
+  console.log('restaurantsData antes de return: ', restaurantsData);
 
   return (
     <Layout>

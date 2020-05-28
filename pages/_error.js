@@ -4,12 +4,12 @@ import regeneratorRuntime from 'regenerator-runtime';
 import PropTypes from 'prop-types';
 
 const ErrorPage = ({ statusCode }) => (
-  <ErrorStyled>
+  <div>
     <img alt='error-img' src={`/__mocks__/errors/${statusCode}.jpg`} />
     <button className='button is-danger is-medium is-rounded' onClick={() => Router.push('/')}>
       Ir a página de inicio
     </button>
-  </ErrorStyled>
+  </div>
 );
 
 ErrorPage.getInitialProps = ({ res, err }) => {
