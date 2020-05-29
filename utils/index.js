@@ -1,4 +1,4 @@
-import { TITLES } from './constants';
+import { CATEGORIES_ITEMS, TITLES } from './constants';
 import isObjectEmpty from './isObjectEmpty';
 
-export { isObjectEmpty, TITLES };
+export { isObjectEmpty, CATEGORIES_ITEMS, TITLES };

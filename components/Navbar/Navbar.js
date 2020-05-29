@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useDispatch, useSelector } from 'react-redux';
+import { getActiveCategorie } from '../../redux/selectors';
+import { SET_ACTIVE_CATEGORIE } from '../../redux/constants';
 
 import { NavbarItem } from './';
+import { CATEGORIES_ITEMS } from 'utils';
 
 const NAV_ITEMS = [
   { page: 'Inicio', route: '/' },
   { page: 'Mapa', route: '/home' },
-  { page: 'Oriental', route: '/home' },
-  { page: 'Postres', route: '/home' },
-  { page: 'Vegetariana', route: '/home' },
-  { page: 'Cafecito', route: '/home' },
 ];
 
 const Navbar = props => {
+  const dispatch = useDispatch();
+  const activeCategorie = useSelector(getActiveCategorie);
+
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isDropOpen, setIsDropOpen] = useState(false);
 
@@ -48,19 +51,23 @@ const Navbar = props => {
             <NavbarItem {...NAV_ITEMS[1]} {...props} />
             <div
               className={
-                isDropOpen
-                  ? 'navbar-item has-dropdown is-active'
-                  : 'navbar-item has-dropdown is-active'
+                isDropOpen ? 'navbar-item has-dropdown is-active' : 'navbar-item has-dropdown'
               }
               onClick={toggleDrop}
             >
               <hr className='navbar-divider' />
               <a className='navbar-link'>Comida</a>
               <div className='navbar-dropdown is-right'>
-                <NavbarItem {...NAV_ITEMS[2]} {...props} />
-                <NavbarItem {...NAV_ITEMS[3]} {...props} />
-                <NavbarItem {...NAV_ITEMS[4]} {...props} />
-                <NavbarItem {...NAV_ITEMS[5]} {...props} />
+                {CATEGORIES_ITEMS.map(({ categorie, label }) => (
+                  <a
+                    className={
+                      activeCategorie === categorie ? 'navbar-item is-active' : 'navbar-item'
+                    }
+                    onClick={() => dispatch({ type: SET_ACTIVE_CATEGORIE, payload: categorie })}
+                  >
+                    {label}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
