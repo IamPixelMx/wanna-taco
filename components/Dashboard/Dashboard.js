@@ -6,15 +6,20 @@
 //   return () => setValue(value => value + 1); // update the state to force render
 // };
 // const forceUpdate = useForceUpdate();
+import { useSelector } from 'react-redux';
+import { getActiveCategorie, getCategories } from '../../redux/selectors';
 
-const Dashboard = ({ sections, activeCategorie }) => {
-  // console.log('info de categoría', sections[activeCategorie]);
+const Dashboard = () => {
+  const categories = useSelector(getCategories);
+  const activeCategorie = useSelector(getActiveCategorie);
+
+  // console.log('info de categoria:', categories[activeCategorie]);
 
   return (
     <section id='dashboard'>
       <div id='list' className='container has-margin-top'>
-        {activeCategorie}
-        {/* {sections[activeCategorie].map(props => (
+        {`La categoria activa es: ${activeCategorie}`}
+        {/* {categories[activeCategorie].map(props => (
           <UserCard {...props} key={props.name} />
         ))} */}
       </div>

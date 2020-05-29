@@ -11,12 +11,12 @@ const TAB_ITEMS = [
   { categorie: 'coffee', label: 'Cafecito' },
 ];
 
-const Tabs = props => {
+const Tabs = () => {
   return (
     <div className='tabs is-toggle is-toggle-rounded is-medium is-centered is-fullwidth'>
       <ul>
-        {TAB_ITEMS.map(({ categorie }) => (
-          <TabItem {...categorie} {...props} />
+        {TAB_ITEMS.map(props => (
+          <TabItem {...props} />
         ))}
       </ul>
     </div>

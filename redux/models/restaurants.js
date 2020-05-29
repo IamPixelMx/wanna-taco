@@ -1,5 +1,5 @@
 export const restaurants = {
-  sections: {
+  categories: {
     all: null,
     desserts: null,
     coffee: null,
@@ -7,6 +7,7 @@ export const restaurants = {
     yacos: null,
     vegie: null,
   },
+  activeCategorie: 'all',
   currentRestaurant: {
     id: null,
     rating: null,
