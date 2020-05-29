@@ -15,7 +15,7 @@ const Home = () => {
    */
   useEffect(() => {
     dispatch({ type: GET_MELP_RESTAURANTS_DATA });
-  });
+  }, [categories]);
 
   return (
     <Layout>

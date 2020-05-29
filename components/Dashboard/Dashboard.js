@@ -9,6 +9,8 @@
 import { useSelector } from 'react-redux';
 import { getActiveCategorie, getCategories } from '../../redux/selectors';
 
+import { Card } from 'components';
+
 const Dashboard = () => {
   const categories = useSelector(getCategories);
   const activeCategorie = useSelector(getActiveCategorie);
@@ -16,12 +18,12 @@ const Dashboard = () => {
   // console.log('info de categoria:', categories[activeCategorie]);
 
   return (
-    <section id='dashboard'>
+    <section className='tile' id='dashboard'>
       <div id='list' className='container has-margin-top'>
-        {`La categoria activa es: ${activeCategorie}`}
-        {/* {categories[activeCategorie].map(props => (
-          <UserCard {...props} key={props.name} />
-        ))} */}
+        {`La categoría activa es: ${activeCategorie}`}
+        {categories[activeCategorie]
+          ? categories[activeCategorie].map(props => <Card {...props} />)
+          : `No hay sitios en ${activeCategorie}`}
       </div>
     </section>
   );
