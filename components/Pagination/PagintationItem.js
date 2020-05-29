@@ -2,7 +2,7 @@ const ItemPagination = (handlePagination, currentPage, page, i) => {
   const currentPageNumber = parseInt(currentPage, 10);
 
   return (
-    <li key={i}>
+    <li>
       <a
         className={currentPageNumber == page ? 'pagination-link is-current' : 'pagination-link'}
         aria-label={currentPageNumber == page ? 'Page ' + page : 'Goto page ' + page}

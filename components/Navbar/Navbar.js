@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { page: 'Mapa', route: '/home' },
 ];
 
-const Navbar = props => {
+const Navbar = ({ activeRoute }) => {
   const dispatch = useDispatch();
   const activeCategorie = useSelector(getActiveCategorie);
 
@@ -47,8 +47,9 @@ const Navbar = props => {
         </div>
         <div className={isNavOpen ? 'navbar-menu is-active' : 'navbar-menu'} id='navbarMenuHeroB'>
           <div className={isNavOpen ? 'navbar-end is-active' : 'navbar-end'}>
-            <NavbarItem {...NAV_ITEMS[0]} {...props} />
-            <NavbarItem {...NAV_ITEMS[1]} {...props} />
+            {NAV_ITEMS.map(props => (
+              <NavbarItem key={`${props.page}-nav-link`} activeRoute={activeRoute} {...props} />
+            ))}
             <div
               className={
                 isDropOpen ? 'navbar-item has-dropdown is-active' : 'navbar-item has-dropdown'
@@ -60,6 +61,7 @@ const Navbar = props => {
               <div className='navbar-dropdown is-right'>
                 {CATEGORIES_ITEMS.map(({ categorie, label }) => (
                   <a
+                    key={`${categorie}-drop`}
                     className={
                       activeCategorie === categorie ? 'navbar-item is-active' : 'navbar-item'
                     }

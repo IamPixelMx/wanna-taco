@@ -7,23 +7,24 @@
 // };
 // const forceUpdate = useForceUpdate();
 import { useSelector } from 'react-redux';
-import { getActiveCategorie, getCategories } from '../../redux/selectors';
+import { getActiveCategorie, getCategories, getState } from '../../redux/selectors';
 
 import { Card } from 'components';
 
+const getItemsToShow = array => (array.length > 15 ? array.slice(0, 5) : array);
+
 const Dashboard = () => {
-  const categories = useSelector(getCategories);
   const activeCategorie = useSelector(getActiveCategorie);
+  const categories = useSelector(getCategories);
 
-  // console.log('info de categoria:', categories[activeCategorie]);
-
+  const itemsToShow = categories[activeCategorie] && getItemsToShow(categories[activeCategorie]);
+  const cards = itemsToShow && itemsToShow.map(props => <Card key={props.id} {...props} />);
   return (
     <section className='tile' id='dashboard'>
       <div id='list' className='container has-margin-top'>
-        {`La categoría activa es: ${activeCategorie}`}
-        {categories[activeCategorie]
-          ? categories[activeCategorie].map(props => <Card {...props} />)
-          : `No hay sitios en ${activeCategorie}`}
+        {cards != null
+          ? cards
+          : `Aún no tenemos sitios en la categoría ${activeCategorie}. Seguiremos trabajando para ofrecerte la mejor información. ¡Gracias!`}
       </div>
     </section>
   );

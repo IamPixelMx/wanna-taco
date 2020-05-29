@@ -1,8 +1,6 @@
-import { mock_all } from '../sagas/api/miniAPI';
-
 export const restaurants = {
   categories: {
-    all: mock_all,
+    all: null,
     desserts: null,
     coffee: null,
     oriental: null,

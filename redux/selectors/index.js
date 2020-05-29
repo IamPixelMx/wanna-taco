@@ -1,3 +1,3 @@
-import { getActiveCategorie, getCategories } from './restaurantsDataSelector';
+import { getActiveCategorie, getCategories, getState } from './restaurantsDataSelector';
 
-export { getActiveCategorie, getCategories };
+export { getActiveCategorie, getCategories, getState };

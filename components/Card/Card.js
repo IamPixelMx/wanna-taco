@@ -12,7 +12,7 @@ import { TacosIcon } from 'components';
 
 const Card = ({ id, rating, name, contact, address }) => {
   return (
-    <div className='tile is-child box' key={id}>
+    <div className='tile is-child box'>
       <article className='media'>
         <figure className='media-left'>
           <p className='image is-96x96 is-img-card'>
@@ -28,7 +28,7 @@ const Card = ({ id, rating, name, contact, address }) => {
               <small> {`📞  ${contact.phone}`} </small>
             </p>
             <p className='subtitle is-5 is-spaced'>
-              <small> {`Calificación: ${rating}  ⭐`} </small>
+              <small> {`⭐ estrellas: ${rating}`} </small>
             </p>
             <div className='level has-text-centered'>
               <p className='level-item is-vertical-align'>

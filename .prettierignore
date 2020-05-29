@@ -2,4 +2,4 @@
 node_modules
 .next
 dist
-*/__mocks__/api/api.js
+*/__mocks__/api/data-melp.json
