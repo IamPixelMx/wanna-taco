@@ -29,10 +29,10 @@ const Layout = ({ children }) => {
       <style jsx global>
         {`
           .leaflet-container {
-            height: 25rem;
+            height: 30rem;
           }
           .padding-top {
-            padding-top: 15rem;
+            padding-top: 7rem;
           }
         `}
       </style>

@@ -1,5 +1,4 @@
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet-universal';
-// import { TileLayer, Marker, Popup } from 'react-leaflet';
 
 // type State = {
 //   lat: number,
