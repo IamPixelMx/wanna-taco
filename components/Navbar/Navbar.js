@@ -9,7 +9,7 @@ import { CATEGORIES_ITEMS } from 'utils';
 
 const NAV_ITEMS = [
   { page: 'Inicio', route: '/' },
-  { page: 'Mapa', route: '/home' },
+  { page: 'Mapa', route: '/map' },
 ];
 
 const Navbar = ({ activeRoute }) => {
