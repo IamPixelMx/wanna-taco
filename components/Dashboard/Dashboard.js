@@ -11,7 +11,7 @@ import { getActiveCategorie, getCategories, getState } from '../../redux/selecto
 
 import { Card } from 'components';
 
-const getItemsToShow = array => (array.length > 15 ? array.slice(0, 5) : array);
+const getItemsToShow = array => (array.length > 15 ? array.slice(0, 15) : array);
 
 const Dashboard = () => {
   const activeCategorie = useSelector(getActiveCategorie);
@@ -22,9 +22,14 @@ const Dashboard = () => {
   return (
     <section className='tile' id='dashboard'>
       <div id='list' className='container has-margin-top'>
-        {cards != null
-          ? cards
-          : `Aún no tenemos sitios en la categoría ${activeCategorie}. Seguiremos trabajando para ofrecerte la mejor información. ¡Gracias!`}
+        {cards != null ? (
+          cards
+        ) : (
+          <p className='subtitle is-spaced'>
+            Aún no tenemos sitios en la categoría <strong>{activeCategorie}</strong>. Seguiremos
+            trabajando para ofrecerte la mejor información. ¡Gracias!
+          </p>
+        )}
       </div>
     </section>
   );
