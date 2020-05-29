@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Router, { useRouter } from 'next/router';
 import { useDispatch } from 'react-redux';
 
-// import { cleanUsersMatch } from "../store/actions/users-actions";
-// import { cleanReposMatch } from "../store/actions/repositories-actions";
 import { Loader, Navbar } from 'components';
 
 const Layout = ({ children }) => {
@@ -14,8 +12,6 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     Router.onRouteChangeStart = () => {
-      // dispatch(cleanUsersMatch());
-      // dispatch(cleanReposMatch());
       setIsLoading(true);
     };
     Router.onRouteChangeComplete = () => {
@@ -30,6 +26,16 @@ const Layout = ({ children }) => {
     <main id='main' className='has-navbar-fixed-top section'>
       <Navbar activeRoute={router.pathname} />
       {isLoading ? <Loader {...isLoading} /> : children}
+      <style jsx global>
+        {`
+          .leaflet-container {
+            height: 25rem;
+          }
+          .padding-top {
+            padding-top: 15rem;
+          }
+        `}
+      </style>
     </main>
   );
 };

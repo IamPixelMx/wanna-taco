@@ -10,6 +10,8 @@ import withReduxSaga from 'next-redux-saga';
 import configureStore from 'redux/configureStore';
 // Bulma CSS
 import 'bulma/css/bulma.min.css';
+// Leaflet CSS
+import 'leaflet/dist/leaflet.css';
 // Tab Titles
 import { TITLES as titles } from 'utils';
 import { Footer, TitleTab } from 'components';
