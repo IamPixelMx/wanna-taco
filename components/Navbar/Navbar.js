@@ -14,9 +14,13 @@ const NAV_ITEMS = [
 
 const Navbar = props => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isDropOpen, setIsDropOpen] = useState(false);
 
-  const toggle = () => {
+  const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
+  };
+  const toggleDrop = () => {
+    setIsDropOpen(!isDropOpen);
   };
 
   return (
@@ -31,7 +35,7 @@ const Navbar = props => {
           <span
             className={isNavOpen ? 'navbar-burger is-active' : 'navbar-burger'}
             data-target='navbarMenuHeroB'
-            onClick={toggle}
+            onClick={toggleNav}
           >
             <span></span>
             <span></span>
@@ -42,10 +46,17 @@ const Navbar = props => {
           <div className={isNavOpen ? 'navbar-end is-active' : 'navbar-end'}>
             <NavbarItem {...NAV_ITEMS[0]} {...props} />
             <NavbarItem {...NAV_ITEMS[1]} {...props} />
-            <div className='navbar-item has-dropdown is-hoverable'>
+            <div
+              className={
+                isDropOpen
+                  ? 'navbar-item has-dropdown is-active'
+                  : 'navbar-item has-dropdown is-active'
+              }
+              onClick={toggleDrop}
+            >
               <hr className='navbar-divider' />
               <a className='navbar-link'>Comida</a>
-              <div className='navbar-dropdown is-boxed is-right'>
+              <div className='navbar-dropdown is-right'>
                 <NavbarItem {...NAV_ITEMS[2]} {...props} />
                 <NavbarItem {...NAV_ITEMS[3]} {...props} />
                 <NavbarItem {...NAV_ITEMS[4]} {...props} />
