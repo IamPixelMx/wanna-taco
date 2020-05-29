@@ -1,4 +1,4 @@
 import { createSelector } from 'reselect';
 
-const restaurantsDataSelector = state => state.restaurantsReducer.data;
-export const getRestaurantsData = createSelector([restaurantsDataSelector], data => data);
+const restaurantsDataSelector = state => state.restaurantsReducer.sections;
+export const getSections = createSelector([restaurantsDataSelector], sections => sections);

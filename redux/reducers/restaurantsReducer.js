@@ -20,7 +20,9 @@ const restaurantsReducer = (state = INITIAL_STATE, { type, payload = {} }) => {
       return {
         ...state,
         restaurants: {
-          data: payload,
+          sections: {
+            all: payload,
+          },
         },
         loading: false,
         error: '',
