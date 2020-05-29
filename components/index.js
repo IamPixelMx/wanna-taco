@@ -1,4 +1,5 @@
 import { Dashboard } from './Dashboard';
+import { Card } from './Card';
 import { Footer } from './Footer';
 import {
   CoffeeIcon,
@@ -21,6 +22,7 @@ import { Tabs, TabItem } from './Tabs';
 import { TitleTab } from './TitleTab';
 
 export {
+  Card,
   Dashboard,
   Footer,
   CoffeeIcon,

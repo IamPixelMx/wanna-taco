@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import restaurantsReducer from './restaurantsReducer';
 
 const rootReducer = combineReducers({
-  restaurantsReducer,
+  restaurants: restaurantsReducer,
 });
 
 export default rootReducer;

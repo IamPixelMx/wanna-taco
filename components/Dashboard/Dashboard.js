@@ -1,27 +1,34 @@
-// import React, { useState, Fragment } from 'react';
-
-//create custom forceUpdate hook
-// const useForceUpdate = () => {
-//   const [value, setValue] = useState(0); // integer state
-//   return () => setValue(value => value + 1); // update the state to force render
-// };
-// const forceUpdate = useForceUpdate();
 import { useSelector } from 'react-redux';
-import { getActiveCategorie, getCategories } from '../../redux/selectors';
+import { getActiveCategorie, getCategories, getState } from '../../redux/selectors';
+
+import { Card } from 'components';
+
+const getItemsToShow = array => (array.length > 15 ? array.slice(0, 15) : array);
 
 const Dashboard = () => {
-  const categories = useSelector(getCategories);
   const activeCategorie = useSelector(getActiveCategorie);
+  const categories = useSelector(getCategories);
+  const activeCategorieArr = categories[activeCategorie];
 
-  // console.log('info de categoria:', categories[activeCategorie]);
-
+  const itemsToShow = activeCategorieArr && getItemsToShow(activeCategorieArr);
+  const cards = itemsToShow && itemsToShow.map(props => <Card key={props.id} {...props} />);
   return (
-    <section id='dashboard'>
-      <div id='list' className='container has-margin-top'>
-        {`La categoria activa es: ${activeCategorie}`}
-        {/* {categories[activeCategorie].map(props => (
-          <UserCard {...props} key={props.name} />
-        ))} */}
+    <section className='tile' id='dashboard'>
+      {/* <div id='categorie-info' className='container is-centered'>
+        {itemsToShow && (
+          <p className='is-subtitle is-spaced has-text-centered'>{`Hay ${activeCategorieArr.length} restaurantes en esta categoría`}</p>
+        )}
+        <br />
+      </div> */}
+      <div id='list' className='container'>
+        {cards != null ? (
+          cards
+        ) : (
+          <p className='subtitle is-spaced'>
+            Aún no tenemos sitios en la categoría <strong>{activeCategorie}</strong>. Seguiremos
+            trabajando para ofrecerte la mejor información. ¡Gracias!
+          </p>
+        )}
       </div>
     </section>
   );

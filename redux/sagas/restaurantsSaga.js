@@ -5,7 +5,7 @@ import { getMelpRestaurantsDataError, getMelpRestaurantsDataSuccess } from '../a
 
 function* getData() {
   try {
-    const request = yield call(getMelpData());
+    const request = yield call(getMelpData);
     yield put(getMelpRestaurantsDataSuccess(request));
   } catch (error) {
     console.error(error);

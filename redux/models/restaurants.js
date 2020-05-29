@@ -4,7 +4,7 @@ export const restaurants = {
     desserts: null,
     coffee: null,
     oriental: null,
-    yacos: null,
+    tacos: null,
     vegie: null,
   },
   activeCategorie: 'all',
