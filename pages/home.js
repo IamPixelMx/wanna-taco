@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <Layout>
       <Fade right>
-        <section id='home' className={'section .m-t-xxl'}>
+        <section id='home' className={'section padding-top .m-t-xxl'}>
           <div className='container'>
             <h2 className='title is-2 is-spaced'>¡Bienvenid@!</h2>
             <h5 className='subtitle is-3 is-spaced'>

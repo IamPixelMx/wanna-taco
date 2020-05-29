@@ -19,7 +19,7 @@ const MapPage = () => {
   return (
     <Layout>
       <Fade left>
-        <section id='map-page' className={'section .m-t-xxl'}>
+        <section id='map-page' className={'padding-top section .m-t-xxl'}>
           <div className='container'>
             <h5 className='subtitle is-3 is-spaced'>Encuentra tu restaurante más cercano </h5>
             <div className='content has-text-centered has-lg-margin-top'>
