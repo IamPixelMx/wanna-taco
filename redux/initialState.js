@@ -1,7 +1,7 @@
 import { restaurants } from './models';
 
 const initialState = {
-  ...restaurants,
+  restaurants,
 };
 
 export default initialState;

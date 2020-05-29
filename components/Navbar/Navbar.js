@@ -1,22 +1,29 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useDispatch, useSelector } from 'react-redux';
+import { getActiveCategorie } from '../../redux/selectors';
+import { SET_ACTIVE_CATEGORIE } from '../../redux/constants';
 
 import { NavbarItem } from './';
+import { CATEGORIES_ITEMS } from 'utils';
 
 const NAV_ITEMS = [
   { page: 'Inicio', route: '/' },
   { page: 'Mapa', route: '/home' },
-  { page: 'Oriental', route: '/home' },
-  { page: 'Postres', route: '/home' },
-  { page: 'Vegetariana', route: '/home' },
-  { page: 'Cafecito', route: '/home' },
 ];
 
 const Navbar = props => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const dispatch = useDispatch();
+  const activeCategorie = useSelector(getActiveCategorie);
 
-  const toggle = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isDropOpen, setIsDropOpen] = useState(false);
+
+  const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
+  };
+  const toggleDrop = () => {
+    setIsDropOpen(!isDropOpen);
   };
 
   return (
@@ -31,7 +38,7 @@ const Navbar = props => {
           <span
             className={isNavOpen ? 'navbar-burger is-active' : 'navbar-burger'}
             data-target='navbarMenuHeroB'
-            onClick={toggle}
+            onClick={toggleNav}
           >
             <span></span>
             <span></span>
@@ -42,14 +49,25 @@ const Navbar = props => {
           <div className={isNavOpen ? 'navbar-end is-active' : 'navbar-end'}>
             <NavbarItem {...NAV_ITEMS[0]} {...props} />
             <NavbarItem {...NAV_ITEMS[1]} {...props} />
-            <div className='navbar-item has-dropdown is-hoverable'>
+            <div
+              className={
+                isDropOpen ? 'navbar-item has-dropdown is-active' : 'navbar-item has-dropdown'
+              }
+              onClick={toggleDrop}
+            >
               <hr className='navbar-divider' />
               <a className='navbar-link'>Comida</a>
-              <div className='navbar-dropdown is-boxed is-right'>
-                <NavbarItem {...NAV_ITEMS[2]} {...props} />
-                <NavbarItem {...NAV_ITEMS[3]} {...props} />
-                <NavbarItem {...NAV_ITEMS[4]} {...props} />
-                <NavbarItem {...NAV_ITEMS[5]} {...props} />
+              <div className='navbar-dropdown is-right'>
+                {CATEGORIES_ITEMS.map(({ categorie, label }) => (
+                  <a
+                    className={
+                      activeCategorie === categorie ? 'navbar-item is-active' : 'navbar-item'
+                    }
+                    onClick={() => dispatch({ type: SET_ACTIVE_CATEGORIE, payload: categorie })}
+                  >
+                    {label}
+                  </a>
+                ))}
               </div>
             </div>
           </div>

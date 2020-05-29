@@ -2,6 +2,12 @@ import {
   getMelpRestaurantsData,
   getMelpRestaurantsDataError,
   getMelpRestaurantsDataSuccess,
+  setActiveCategorie,
 } from './restaurantsActions';
 
-export { getMelpRestaurantsData, getMelpRestaurantsDataError, getMelpRestaurantsDataSuccess };
+export {
+  getMelpRestaurantsData,
+  getMelpRestaurantsDataError,
+  getMelpRestaurantsDataSuccess,
+  setActiveCategorie,
+};

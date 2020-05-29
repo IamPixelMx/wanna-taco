@@ -1,5 +1,13 @@
 export const restaurants = {
-  data: null,
+  categories: {
+    all: null,
+    desserts: null,
+    coffee: null,
+    oriental: null,
+    yacos: null,
+    vegie: null,
+  },
+  activeCategorie: 'all',
   currentRestaurant: {
     id: null,
     rating: null,

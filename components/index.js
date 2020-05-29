@@ -1,39 +1,44 @@
+import { Dashboard } from './Dashboard';
 import { Footer } from './Footer';
 import {
   CoffeeIcon,
-  DessertIcon,
+  DessertsIcon,
   DishIcon,
   LikeIcon,
   MelpIcon,
   SearchIcon,
-  SaladIcon,
+  VegieIcon,
   ShareCircleIcon,
   ShareIcon,
   OrientalIcon,
-  TacoIcon,
+  TacosIcon,
 } from './Icons';
 import { Layout } from './Layout';
 import { LinkButton } from './LinkButton';
 import { Loader } from './Loader';
 import { Navbar } from './Navbar';
+import { Tabs, TabItem } from './Tabs';
 import { TitleTab } from './TitleTab';
 
 export {
+  Dashboard,
   Footer,
   CoffeeIcon,
-  DessertIcon,
+  DessertsIcon,
   DishIcon,
   LikeIcon,
   MelpIcon,
   SearchIcon,
-  SaladIcon,
+  VegieIcon,
   ShareCircleIcon,
   ShareIcon,
   OrientalIcon,
-  TacoIcon,
+  TacosIcon,
   Layout,
   LinkButton,
   Loader,
   Navbar,
+  Tabs,
+  TabItem,
   TitleTab,
 };

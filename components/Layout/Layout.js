@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   });
 
   return (
-    <main id='main' className='has-padding-top section'>
+    <main id='main' className='has-navbar-fixed-top section'>
       <Navbar activeRoute={router.pathname} />
       {isLoading ? <Loader {...isLoading} /> : children}
     </main>

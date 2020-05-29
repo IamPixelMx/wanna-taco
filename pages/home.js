@@ -1,34 +1,21 @@
 import React, { useEffect } from 'react';
 import regeneratorRuntime from 'regenerator-runtime';
-
 import { useDispatch, useSelector } from 'react-redux';
 import Fade from 'react-reveal/Fade';
-import { Layout, LinkButton } from 'components';
-import { getMelpRestaurantsData } from '../redux/actions';
-import { getRestaurantsData } from '../redux/selectors';
+import { Dashboard, Layout, Tabs } from 'components';
+import { GET_MELP_RESTAURANTS_DATA } from '../redux/constants';
+import { getCategories } from '../redux/selectors';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const restaurantsData = useSelector(getRestaurantsData);
+  const categories = useSelector(getCategories);
 
   /*
    * Use 'useEffect' to get Melp data
    */
   useEffect(() => {
-    dispatch(getMelpRestaurantsData());
-    console.log('restaurantsData antes de return: ', restaurantsData);
-  }, [restaurantsData]);
-
-  /*
-   *Categories of food
-   */
-  const SELECTIONS = [
-    { href: '/cafecito', text: 'cafecito', color: 'is-info' },
-    { href: '/oriental', text: 'oriental', color: 'is-warning' },
-    { href: '/postres', text: 'postres', color: 'is-primary' },
-    { href: '/tacos', text: 'tacos', color: 'is-link' },
-    { href: '/vegetariano', text: 'vegetariano', color: 'is-danger' },
-  ];
+    dispatch({ type: GET_MELP_RESTAURANTS_DATA });
+  });
 
   return (
     <Layout>
@@ -41,13 +28,8 @@ const Home = () => {
             </h5>
             <div className='content has-text-centered has-lg-margin-top'>
               <p className='is-size-4'> ¿Qué se te anotoja comer hoy?</p>
-              <div className='buttons is-centered'>
-                {/* <LinkButton href='/home' text='vegetariano' color='is-danger' /> */}
-                {/*  <LinkButton {SELECTIONS[0]} />
-                  <LinkButton {SELECTIONS[1]} />
-                  <LinkButton {SELECTIONS[2]} />
-                  <LinkButton {SELECTIONS[3]} />*/}
-              </div>
+              <Tabs />
+              <Dashboard />
             </div>
           </div>
         </section>

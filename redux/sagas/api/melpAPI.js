@@ -4,8 +4,8 @@ const API_URL = process.env.MOCK_API_URL;
 
 export const getMelpData = async () => {
   const response = await axios.get(API_URL);
-  const melpData = response.data;
-  console.log('Melp Data[0] desde axios: ', melpData[0]);
+  const { data } = response;
+  console.log('data desde axios: ', data);
 
-  return melpData;
+  return data;
 };
