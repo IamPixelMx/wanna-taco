@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import regeneratorRuntime from 'regenerator-runtime';
 import { useDispatch, useSelector } from 'react-redux';
 import Fade from 'react-reveal/Fade';
-import { Layout, Map, MapWithCluster } from 'components';
+import { Layout, Map } from 'components';
 import { getCategories } from '../redux/selectors';
 
 const MapPage = () => {
@@ -21,8 +21,6 @@ const MapPage = () => {
           <div className='container'>
             <h5 className='subtitle is-4 is-spaced'>Encuentra tu restaurante más cercano </h5>
             <div className='content has-text-centered has-lg-margin-top'>
-              <MapWithCluster />
-              <br />
               <Map />
             </div>
           </div>

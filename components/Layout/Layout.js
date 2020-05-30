@@ -28,12 +28,6 @@ const Layout = ({ children }) => {
       {isLoading ? <Loader {...isLoading} /> : children}
       <style jsx global>
         {`
-          .leaflet-container,
-          .markercluster-map {
-            height: 23.5rem;
-            width: 80%;
-            margin: 2rem auto;
-          }
           .padding-top {
             padding-top: 6.5rem;
           }

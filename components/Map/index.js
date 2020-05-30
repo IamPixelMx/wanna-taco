@@ -1,4 +1,3 @@
 import Map from './Map';
-import MapWithCluster from './MapWithCluster';
 
-export { Map, MapWithCluster };
+export { Map };

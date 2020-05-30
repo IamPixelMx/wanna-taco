@@ -17,7 +17,7 @@ import {
 import { Layout } from './Layout';
 import { LinkButton } from './LinkButton';
 import { Loader } from './Loader';
-import { Map, MapWithCluster } from './Map';
+import { Map } from './Map';
 import { Navbar } from './Navbar';
 import { Tabs, TabItem } from './Tabs';
 import { TitleTab } from './TitleTab';
@@ -41,7 +41,6 @@ export {
   LinkButton,
   Loader,
   Map,
-  MapWithCluster,
   Navbar,
   Tabs,
   TabItem,
