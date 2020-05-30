@@ -31,6 +31,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-leaflet": "^2.7.0",
+    "react-leaflet-markercluster": "^2.0.0",
     "react-leaflet-universal": "^2.2.1",
     "react-redux": "^7.2.0",
     "react-reveal": "^1.2.2",

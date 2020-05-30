@@ -1,4 +1,5 @@
 # Ignore dir :
 node_modules
 .next
+
 */__mocks__/api/data-melp.json

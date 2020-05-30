@@ -1,3 +1,4 @@
-import MelpMap from './MelpMap';
+import Map from './Map';
+import MapWithCluster from './MapWithCluster';
 
-export { MelpMap };
+export { Map, MapWithCluster };
