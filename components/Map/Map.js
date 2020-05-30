@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet-universal';
+// Leaflet CSS
 import 'leaflet/dist/leaflet.css';
 
 const Map = () => {

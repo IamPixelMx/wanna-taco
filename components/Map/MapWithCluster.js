@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet-universal';
+// Leaflet CSS
 import 'leaflet/dist/leaflet.css';
 
 const MapWithCluster = () => {
