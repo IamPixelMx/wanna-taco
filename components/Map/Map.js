@@ -3,56 +3,35 @@ import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet-unive
 
 // Leaflet CSS
 import 'leaflet/dist/leaflet.css';
-import 'react-leaflet-markercluster/dist/styles.min.css';
 
 const Map = () => {
-  // useEffect(() => {
-  //   const L = require('leaflet');
+  const PopupMarker = ({ content, position }) => (
+    <Marker position={position}>
+      <Popup>{content}</Popup>
+    </Marker>
+  );
 
-  //   delete L.Icon.Default.prototype._getIconUrl;
+  const MarkersGroupElement = ({ markers }) => {
+    const items = markers.map((props, key) => <PopupMarker key={key} {...props} />);
+    return <Fragment>{items}</Fragment>;
+  };
 
-  //   L.Icon.Default.mergeOptions({
-  //     iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-  //     iconUrl: require('leaflet/dist/images/marker-icon.png'),
-  //     shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
-  //   });
-  // }, []);
-  // const createClusterCustomIcon = cluster =>
-  //   L.divIcon({
-  //     html: `<span>${cluster.getChildCount()}</span>`,
-  //     className: 'marker-cluster-custom',
-  //     iconSize: L.point(40, 40, true),
-  //   });
-
-  // iconCreateFunction={createClusterCustomIcon}
+  const myMarkers = {
+    markers: [
+      { key: 'restaurante1', position: [19.4424, -99.1238], content: 'My first popup' },
+      { key: 'restaurante2', position: [19.4334, -99.1285], content: 'My second popup' },
+      { key: 'restaurante3', position: [19.436, -99.1297], content: 'My third popup' },
+      { key: 'CDMX', position: [19.49, -99.12], content: 'Ciudad de México' },
+    ],
+  };
 
   return (
-    <LeafletMap center={[23.63, -102.55]} zoom={5} maxZoom={18} style={{ height: '100vh' }}>
-      {() => {
-        const MarkerClusterGroup = require('react-leaflet-markercluster').default;
-        return (
-          <Fragment>
-            <TileLayer
-              url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            />
-            <MarkerClusterGroup>
-              <Marker position={[19.436, -99.1297]}>
-                <Popup>
-                  ALGUN LUGAR QUE PREFIERO NO RECORDAR. <br /> PopUp Easily customizable.
-                </Popup>
-              </Marker>
-              <Marker position={[19.4424, -99.1238]} />
-              <Marker position={[19.4334, -99.1285]} />
-              <Marker position={[19.49, -99.12]}>
-                <Popup>
-                  CIUDAD DE MEXICO. <br /> PopUp Easily customizable.
-                </Popup>
-              </Marker>
-            </MarkerClusterGroup>
-          </Fragment>
-        );
-      }}
+    <LeafletMap center={[23.63, -102.55]} zoom={6} maxZoom={18}>
+      <TileLayer
+        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      />
+      <MarkersGroupElement {...myMarkers} />
     </LeafletMap>
   );
 };

@@ -31,6 +31,10 @@ const Layout = ({ children }) => {
           .padding-top {
             padding-top: 6.5rem;
           }
+          .leaflet-container {
+            height: 40rem;
+            margin: 2rem;
+          }
         `}
       </style>
     </main>
