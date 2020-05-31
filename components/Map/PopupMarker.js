@@ -34,8 +34,8 @@ const PopupMarker = ({
         </p>
         <p>
           <b>Dirección</b>
-          📍&nbsp;{` ${street}, ${city}, ${state}`}
         </p>
+        <p>📍&nbsp;{` ${street}, ${city}, ${state}`}</p>
         <p> 📞 &nbsp; {phone}</p>
         <p> 🌐 &nbsp; {site}</p>
         <p>
