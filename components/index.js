@@ -17,8 +17,9 @@ import {
 import { Layout } from './Layout';
 import { LinkButton } from './LinkButton';
 import { Loader } from './Loader';
-import { MelpMap } from './Map';
+import { Map, PopupMarker } from './Map';
 import { Navbar } from './Navbar';
+import { StarRating } from './StarRating';
 import { Tabs, TabItem } from './Tabs';
 import { TitleTab } from './TitleTab';
 
@@ -40,8 +41,10 @@ export {
   Layout,
   LinkButton,
   Loader,
-  MelpMap,
+  Map,
   Navbar,
+  PopupMarker,
+  StarRating,
   Tabs,
   TabItem,
   TitleTab,

@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
     Router.onRouteChangeError = () => {
       setIsLoading(false);
     };
-  });
+  }, []);
 
   return (
     <main id='main' className='has-navbar-fixed-top section'>
@@ -28,11 +28,12 @@ const Layout = ({ children }) => {
       {isLoading ? <Loader {...isLoading} /> : children}
       <style jsx global>
         {`
-          .leaflet-container {
-            height: 30rem;
-          }
           .padding-top {
-            padding-top: 7rem;
+            padding-top: 6.5rem;
+          }
+          .leaflet-container {
+            height: 40rem;
+            margin: 2rem;
           }
         `}
       </style>

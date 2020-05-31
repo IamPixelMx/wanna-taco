@@ -1,3 +1,4 @@
-import MelpMap from './MelpMap';
+import Map from './Map';
+import PopupMarker from './PopupMarker';
 
-export { MelpMap };
+export { Map, PopupMarker };
