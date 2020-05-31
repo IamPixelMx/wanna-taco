@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
     Router.onRouteChangeError = () => {
       setIsLoading(false);
     };
-  });
+  }, []);
 
   return (
     <main id='main' className='has-navbar-fixed-top section'>

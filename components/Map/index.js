@@ -1,3 +1,4 @@
 import Map from './Map';
+import PopupMarker from './PopupMarker';
 
-export { Map };
+export { Map, PopupMarker };

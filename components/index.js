@@ -17,8 +17,9 @@ import {
 import { Layout } from './Layout';
 import { LinkButton } from './LinkButton';
 import { Loader } from './Loader';
-import { Map } from './Map';
+import { Map, PopupMarker } from './Map';
 import { Navbar } from './Navbar';
+import { StarRating } from './StarRating';
 import { Tabs, TabItem } from './Tabs';
 import { TitleTab } from './TitleTab';
 
@@ -42,6 +43,8 @@ export {
   Loader,
   Map,
   Navbar,
+  PopupMarker,
+  StarRating,
   Tabs,
   TabItem,
   TitleTab,
