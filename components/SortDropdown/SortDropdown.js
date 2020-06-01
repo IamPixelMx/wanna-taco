@@ -1,4 +1,5 @@
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { getActiveCategorie, getCategories } from '../../redux/selectors';
 import { SET_SORTED_DATA } from '../../redux/constants';
 
@@ -13,34 +14,49 @@ const sortOptions = [
 
 const SortDropdrown = () => {
   const dispatch = useDispatch();
+
   const activeCategorie = useSelector(getActiveCategorie);
   const categories = useSelector(getCategories);
-
   const dataToSort = categories[activeCategorie];
+
+  const [isDropOpen, setIsDropOpen] = useState(false);
+
+  const toggleDrop = () => {
+    setIsDropOpen(!isDropOpen);
+  };
 
   const handleClick = type => {
     if (dataToSort) {
       const sortedData = sortData(dataToSort, type);
-      dispatch({ type: SET_SORTED_DATA, payload: { activeCategorie: sortedData } });
+      dispatch({ type: SET_SORTED_DATA, payload: { [activeCategorie]: sortedData } });
+      console.log('====================================');
+      console.log('Se realizo dispatch ', SET_SORTED_DATA, 'categories: ', categories);
+      console.log('====================================');
     }
+    toggleDrop();
   };
 
   return (
-    <div className='dropdown is-left is-active'>
-      <div className='dropdown-trigger'>
-        <button className='button' aria-haspopup='true' aria-controls='dropdown-menu6'>
-          <span>Right aligned</span>
+    <div className={isDropOpen ? 'dropdown is-left is-active' : 'dropdown is-left'}>
+      <div className='dropdown-trigger' onClick={toggleDrop}>
+        <button
+          className='button is-rounded is-medium is-outlined is-info is-light'
+          aria-haspopup='true'
+          aria-controls='dropdown-sort-options'
+        >
+          <span className='has-text-weight-bold'>Ordenar por&nbsp; </span>
           <span className='icon is-small'>
-            <i className='fas fa-angle-down' aria-hidden='true'></i>
+            <i className='fa fa-arrow-circle-down has-text-info' aria-hidden='true'></i>
           </span>
+          <span className='has-text-weight-bold'> : </span>
         </button>
       </div>
-      <div className='dropdown-menu' id='dropdown-menu6' role='menu'>
+      <div className='dropdown-menu' id='dropdown-sort-options' role='menu'>
         <div className='dropdown-content'>
           {sortOptions.map(({ label, type }) => (
-            <div key={`${type}-dropdown`} className='dropdown-item' onClick={handleClick(type)}>
+            <a key={`${type}-dropdown`} className='dropdown-item' onClick={() => handleClick(type)}>
               <p>{label}</p>
-            </div>
+            </a>
           ))}
         </div>
       </div>

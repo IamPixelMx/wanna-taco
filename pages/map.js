@@ -1,19 +1,8 @@
-import React, { useEffect } from 'react';
 import regeneratorRuntime from 'regenerator-runtime';
-import { useDispatch, useSelector } from 'react-redux';
 import Fade from 'react-reveal/Fade';
 import { Layout, Map } from 'components';
-import { getCategories } from '../redux/selectors';
 
 const MapPage = () => {
-  const dispatch = useDispatch();
-  const categories = useSelector(getCategories);
-
-  /*
-   * Use 'useEffect' to
-   */
-  useEffect(() => {}, []);
-
   return (
     <Layout>
       <Fade left>

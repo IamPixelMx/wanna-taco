@@ -48,14 +48,22 @@ const Navbar = ({ activeRoute }) => {
         <div className={isNavOpen ? 'navbar-menu is-active' : 'navbar-menu'} id='navbarMenuHeroB'>
           <div className={isNavOpen ? 'navbar-end is-active' : 'navbar-end'}>
             {NAV_ITEMS.map(props => (
-              <NavbarItem key={`${props.page}-nav-link`} activeRoute={activeRoute} {...props} />
+              <NavbarItem
+                key={`${props.page}-nav-link`}
+                activeRoute={activeRoute}
+                {...props}
+                onClick={toggleNav}
+              />
             ))}
             <div
               href='/'
               className={
                 isDropOpen ? 'navbar-item has-dropdown is-active' : 'navbar-item has-dropdown'
               }
-              onClick={toggleDrop}
+              onClick={() => {
+                toggleDrop();
+                toggleNav();
+              }}
             >
               <hr className='navbar-divider' />
               <a className='navbar-link'>Comida</a>

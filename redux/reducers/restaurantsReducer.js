@@ -21,7 +21,7 @@ const restaurantsReducer = (state = INITIAL_STATE, { type, payload = {} }) => {
     case GET_MELP_RESTAURANTS_DATA_SUCCESS:
       return {
         ...state,
-        categories: { all: payload },
+        categories: { ...state.categories, all: payload },
         loading: false,
         error: '',
       };
@@ -30,7 +30,7 @@ const restaurantsReducer = (state = INITIAL_STATE, { type, payload = {} }) => {
       return { ...state, activeCategorie: payload };
 
     case SET_SORTED_DATA:
-      return { ...state, categories: { ...categories, ...payload } };
+      return { ...state, categories: { ...state.categories, ...payload } };
 
     default:
       return state;

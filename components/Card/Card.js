@@ -1,6 +1,6 @@
 const Card = ({ id, rating, name, contact: { phone, site }, address: { street, city, state } }) => {
   const rateArr = [1, 2, 3, 4, 5];
-  const getStar = rate => (rate <= rating ? ` ⭐` : '');
+  const getStar = rate => (rate <= rating ? '⭐' : '');
 
   return (
     <div id={`${id}-card`} className='tile is-child box'>
@@ -11,7 +11,7 @@ const Card = ({ id, rating, name, contact: { phone, site }, address: { street, c
           </p>
         </figure>
         <div className='media-content'>
-          <p>{name}</p>
+          <p className='title is-5 has-text-weight-bold is-spaced'>{name}</p>
           <p className='subtitle is-5 has-text-weight-bold is-spaced'>Dirección</p>
           <p>📍 &nbsp; {`${street}, ${city}, ${state}`}</p>
           <p className='subtitle is-5 is-spaced'>

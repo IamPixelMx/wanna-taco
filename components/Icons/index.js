@@ -8,6 +8,7 @@ import SearchIcon from './search.svg';
 import ShareCircleIcon from './share-circle.svg';
 import ShareIcon from './share.svg';
 import OrientalIcon from './oriental.svg';
+import PinIcon from './pin.svg';
 import TacosIcon from './tacos.svg';
 
 export {
@@ -21,5 +22,6 @@ export {
   ShareCircleIcon,
   ShareIcon,
   OrientalIcon,
+  PinIcon,
   TacosIcon,
 };

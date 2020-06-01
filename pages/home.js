@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
 import regeneratorRuntime from 'regenerator-runtime';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Fade from 'react-reveal/Fade';
 import { Dashboard, Layout, SortDropdown, Tabs } from 'components';
 import { GET_MELP_RESTAURANTS_DATA } from '../redux/constants';
-import { getCategories } from '../redux/selectors';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const categories = useSelector(getCategories);
 
   /*
    * Use 'useEffect' to get Melp data
@@ -28,8 +26,8 @@ const Home = () => {
             </h5>
             <div className='content has-text-centered has-lg-margin-top'>
               <p className='is-size-4'> ¿Qué se te anotoja comer hoy?</p>
-              <SortDropdown />
               <Tabs />
+              <SortDropdown />
               <Dashboard />
             </div>
           </div>

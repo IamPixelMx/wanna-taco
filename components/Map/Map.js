@@ -3,7 +3,7 @@ import { GET_MELP_RESTAURANTS_DATA } from '../../redux/constants';
 import { getCategories } from '../../redux/selectors';
 
 import { Map, TileLayer } from 'react-leaflet-universal';
-// Leaflet CSS and icons
+// Leaflet CSS
 import 'leaflet/dist/leaflet.css';
 
 import { PopupMarker } from 'components';

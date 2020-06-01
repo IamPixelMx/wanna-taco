@@ -1,5 +1,5 @@
 /*
- *Categories of food
+ * Categories of food
  */
 
 export const CATEGORIES_ITEMS = [

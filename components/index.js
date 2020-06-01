@@ -12,6 +12,7 @@ import {
   ShareCircleIcon,
   ShareIcon,
   OrientalIcon,
+  PinIcon,
   TacosIcon,
 } from './Icons';
 import { Layout } from './Layout';
@@ -37,6 +38,7 @@ export {
   VegieIcon,
   ShareCircleIcon,
   ShareIcon,
+  PinIcon,
   OrientalIcon,
   TacosIcon,
   Layout,
