@@ -3,6 +3,7 @@ import {
   GET_MELP_RESTAURANTS_DATA_ERROR,
   GET_MELP_RESTAURANTS_DATA_SUCCESS,
   SET_ACTIVE_CATEGORIE,
+  SET_SORTED_DATA,
 } from '../constants';
 
 import { restaurants } from '../models';
@@ -27,6 +28,9 @@ const restaurantsReducer = (state = INITIAL_STATE, { type, payload = {} }) => {
 
     case SET_ACTIVE_CATEGORIE:
       return { ...state, activeCategorie: payload };
+
+    case SET_SORTED_DATA:
+      return { ...state, categories: { ...categories, ...payload } };
 
     default:
       return state;

@@ -51,6 +51,7 @@ const Navbar = ({ activeRoute }) => {
               <NavbarItem key={`${props.page}-nav-link`} activeRoute={activeRoute} {...props} />
             ))}
             <div
+              href='/'
               className={
                 isDropOpen ? 'navbar-item has-dropdown is-active' : 'navbar-item has-dropdown'
               }

@@ -2,9 +2,11 @@ import React, { useEffect } from 'react';
 import { Marker, Popup } from 'react-leaflet-universal';
 // Leaflet CSS and icons
 // import 'leaflet/dist/leaflet.css';
-import icon from 'leaflet/dist/images/marker-icon.png';
+// import icon from 'leaflet/dist/images/marker-icon.png';
+import icon from '../../public/pin.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-import retinaIcon from 'leaflet/dist/images/marker-icon-2x.png';
+// import retinaIcon from 'leaflet/dist/images/marker-icon-2x.png';
+import retinaIcon from '../../public/pin.png';
 
 import { StarRating } from 'components';
 

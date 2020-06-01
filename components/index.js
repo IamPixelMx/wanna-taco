@@ -20,6 +20,7 @@ import { Loader } from './Loader';
 import { Map, PopupMarker } from './Map';
 import { Navbar } from './Navbar';
 import { StarRating } from './StarRating';
+import { SortDropdown } from './SortDropdown';
 import { Tabs, TabItem } from './Tabs';
 import { TitleTab } from './TitleTab';
 
@@ -45,6 +46,7 @@ export {
   Navbar,
   PopupMarker,
   StarRating,
+  SortDropdown,
   Tabs,
   TabItem,
   TitleTab,

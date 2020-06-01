@@ -3,6 +3,7 @@ import {
   GET_MELP_RESTAURANTS_DATA_ERROR,
   GET_MELP_RESTAURANTS_DATA_SUCCESS,
   SET_ACTIVE_CATEGORIE,
+  SET_SORTED_DATA,
 } from '../constants';
 
 export const getMelpRestaurantsData = () => ({
@@ -21,5 +22,10 @@ export const getMelpRestaurantsDataSuccess = payload => ({
 
 export const setActiveCategorie = payload => ({
   type: SET_ACTIVE_CATEGORIE,
+  payload,
+});
+
+export const setSortedData = payload => ({
+  type: SET_SORTED_DATA,
   payload,
 });
