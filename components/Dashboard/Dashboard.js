@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { getActiveCategorie, getCategories, getState } from '../../redux/selectors';
+import { getActiveCategorie, getCategories } from '../../redux/selectors';
 
 import { Card } from 'components';
 
@@ -14,12 +14,6 @@ const Dashboard = () => {
   const cards = itemsToShow && itemsToShow.map(props => <Card key={props.id} {...props} />);
   return (
     <section className='tile' id='dashboard'>
-      {/* <div id='categorie-info' className='container is-centered'>
-        {itemsToShow && (
-          <p className='is-subtitle is-spaced has-text-centered'>{`Hay ${activeCategorieArr.length} restaurantes en esta categoría`}</p>
-        )}
-        <br />
-      </div> */}
       <div id='list' className='container'>
         {cards != null ? (
           cards

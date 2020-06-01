@@ -1,0 +1,299 @@
+/*
+ *  Styles from Font Awesome for icons
+ */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+    url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+    url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+    url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+    url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.fa-2x {
+  font-size: 2em;
+}
+.fa-3x {
+  font-size: 3em;
+}
+.fa-4x {
+  font-size: 4em;
+}
+.fa-5x {
+  font-size: 5em;
+}
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.14285714em;
+  list-style-type: none;
+}
+.fa-ul > li {
+  position: relative;
+}
+.fa-li {
+  position: absolute;
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: 0.14285714em;
+  text-align: center;
+}
+.fa-li.fa-lg {
+  left: -1.85714286em;
+}
+.fa-border {
+  padding: 0.2em 0.25em 0.15em;
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+}
+.fa-glass:before {
+  content: '\f000';
+}
+.fa-search:before {
+  content: '\f002';
+}
+.fa-envelope-o:before {
+  content: '\f003';
+}
+.fa-heart:before {
+  content: '\f004';
+}
+.fa-star:before {
+  content: '\f005';
+}
+.fa-star-o:before {
+  content: '\f006';
+}
+.fa-user:before {
+  content: '\f007';
+}
+.fa-home:before {
+  content: '\f015';
+}
+.fa-file-o:before {
+  content: '\f016';
+}
+.fa-clock-o:before {
+  content: '\f017';
+}
+.fa-download:before {
+  content: '\f019';
+}
+.fa-map-marker:before {
+  content: '\f041';
+}
+.fa-info-circle:before {
+  content: '\f05a';
+}
+.fa-arrows-h:before {
+  content: '\f07e';
+}
+.fa-twitter-square:before {
+  content: '\f081';
+}
+.fa-facebook-square:before {
+  content: '\f082';
+}
+.fa-camera-retro:before {
+  content: '\f083';
+}
+.fa-comments:before {
+  content: '\f086';
+}
+.fa-thumbs-o-up:before {
+  content: '\f087';
+}
+.fa-thumbs-o-down:before {
+  content: '\f088';
+}
+.fa-star-half:before {
+  content: '\f089';
+}
+.fa-heart-o:before {
+  content: '\f08a';
+}
+.fa-sign-out:before {
+  content: '\f08b';
+}
+.fa-external-link:before {
+  content: '\f08e';
+}
+.fa-sign-in:before {
+  content: '\f090';
+}
+.fa-upload:before {
+  content: '\f093';
+}
+.fa-phone:before {
+  content: '\f095';
+}
+.fa-square-o:before {
+  content: '\f096';
+}
+.fa-bookmark-o:before {
+  content: '\f097';
+}
+.fa-phone-square:before {
+  content: '\f098';
+}
+.fa-twitter:before {
+  content: '\f099';
+}
+.fa-facebook-f:before,
+.fa-facebook:before {
+  content: '\f09a';
+}
+.fa-hand-o-right:before {
+  content: '\f0a4';
+}
+.fa-hand-o-left:before {
+  content: '\f0a5';
+}
+.fa-hand-o-up:before {
+  content: '\f0a6';
+}
+.fa-hand-o-down:before {
+  content: '\f0a7';
+}
+.fa-arrow-circle-left:before {
+  content: '\f0a8';
+}
+.fa-arrow-circle-right:before {
+  content: '\f0a9';
+}
+.fa-arrow-circle-up:before {
+  content: '\f0aa';
+}
+.fa-arrow-circle-down:before {
+  content: '\f0ab';
+}
+.fa-globe:before {
+  content: '\f0ac';
+}
+.fa-filter:before {
+  content: '\f0b0';
+}
+.fa-group:before,
+.fa-users:before {
+  content: '\f0c0';
+}
+.fa-chain:before,
+.fa-link:before {
+  content: '\f0c1';
+}
+.fa-square:before {
+  content: '\f0c8';
+}
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: '\f0c9';
+}
+.fa-list-ul:before {
+  content: '\f0ca';
+}
+.fa-list-ol:before {
+  content: '\f0cb';
+}
+.fa-pinterest:before {
+  content: '\f0d2';
+}
+.fa-pinterest-square:before {
+  content: '\f0d3';
+}
+.fa-google-plus-square:before {
+  content: '\f0d4';
+}
+.fa-google-plus:before {
+  content: '\f0d5';
+}
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: '\f123';
+}
+.fa-unsorted:before,
+.fa-sort:before {
+  content: '\f0dc';
+}
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: '\f0dd';
+}
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: '\f0de';
+}
+.fa-envelope:before {
+  content: '\f0e0';
+}
+.fa-linkedin:before {
+  content: '\f0e1';
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+
+/* 
+* CSS for Map and star rating
+*/
+
+.leaflet-container {
+  height: 40rem;
+  margin: 2rem;
+}
+
+.star-rating {
+  direction: rtl;
+  display: inline-block;
+  padding: 20px;
+}
+
+.star-rating input[type='radio'] {
+  display: none;
+}
+
+.star-rating label {
+  color: #bbb;
+  font-size: 18px;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type='radio']:checked ~ label {
+  color: #f2b600;

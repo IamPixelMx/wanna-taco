@@ -1,4 +1,7 @@
 const Card = ({ id, rating, name, contact: { phone, site }, address: { street, city, state } }) => {
+  const rateArr = [1, 2, 3, 4, 5];
+  const getStar = rate => (rate <= rating ? '⭐' : '');
+
   return (
     <div id={`${id}-card`} className='tile is-child box'>
       <article className='media'>
@@ -8,32 +11,29 @@ const Card = ({ id, rating, name, contact: { phone, site }, address: { street, c
           </p>
         </figure>
         <div className='media-content'>
-          <div className='content'>
-            <p className='title is-4'>{name}</p>
-            <p className='subtitle is-5 has-text-weight-bold is-spaced'>Dirección</p>
-            <p>📍 &nbsp; {`${street}, ${city}, ${state}`}</p>
-            <p className='subtitle is-5 is-spaced'>
-              <small>📞 &nbsp; {phone} </small>
+          <p>{name}</p>
+          <p className='subtitle is-5 has-text-weight-bold is-spaced'>Dirección</p>
+          <p>📍 &nbsp; {`${street}, ${city}, ${state}`}</p>
+          <p className='subtitle is-5 is-spaced'>
+            <small>📞 &nbsp; {phone} </small>
+          </p>
+          <p className='is-inline-block has-text-weight-semibold'>Rating:&nbsp;</p>
+          {rateArr.map(rate => getStar(rate))}
+          <div className='level has-text-centered'>
+            <p className='level-item is-vertical-align'>
+              <a href={site} target='_blank'>
+                <span className='is-vertical-align'>
+                  <small className='has-text-weight-semibold'> 👍 &nbsp; Me gusta </small>
+                </span>
+              </a>
             </p>
-            <p className='subtitle is-5'>
-              <small> ⭐ &nbsp; Estrellas: &nbsp; {rating} </small>
+            <p className='level-item is-vertical-align'>
+              <a href={site} target='_blank'>
+                <span className='is-vertical-align'>
+                  <small className='has-text-weight-semibold'> 🌐 &nbsp; Abrir sitio web </small>
+                </span>
+              </a>
             </p>
-            <div className='level has-text-centered'>
-              <p className='level-item is-vertical-align'>
-                <a href={site} target='_blank'>
-                  <span className='is-vertical-align'>
-                    <small className='has-text-weight-semibold'> 👍 &nbsp; Me gusta </small>
-                  </span>
-                </a>
-              </p>
-              <p className='level-item is-vertical-align'>
-                <a href={site} target='_blank'>
-                  <span className='is-vertical-align'>
-                    <small className='has-text-weight-semibold'> 🌐 &nbsp; Abrir sitio web </small>
-                  </span>
-                </a>
-              </p>
-            </div>
           </div>
         </div>
       </article>
