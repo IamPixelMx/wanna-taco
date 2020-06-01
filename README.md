@@ -76,13 +76,15 @@ implementando solicitudes Axios.
 
 ## Próximos alcances
 
-- [ ] Alcanzar cobertura >80%
+- [ ] Alcanzar cobertura >80% en todos los componentes y páginas
 
 - [ ] Mostrar información estadística con Google Analytics.
 
-- [ ] Añadir botones de compartir y dar like en redes sociales.
+- [ ] Añadir botones funcionales de compartir y dar like en redes sociales.
 
-- [ ] Mostrar ruta al restaurante según la localización del usuario.
+- [ ] Mostrar ruta al restaurante seleccionado según la localización del usuario.
+
+- [ ] Permitir agregar comentario o reseña al restaurante seleccionado.
 
  <br />
 
