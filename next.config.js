@@ -75,12 +75,6 @@ const nextConfig = {
       config.module.rules.push(rule);
     });
 
-    // Config only for importing svg
-    // config.module.rules.push({
-    //   test: /\.svg$/,
-    //   use: ['@svgr/webpack'],
-    // });
-
     // Build objectwith environment variables
     const env = Object.keys(process.env).reduce((acc, curr) => {
       acc[`process.env.${curr}`] = JSON.stringify(process.env[curr]);

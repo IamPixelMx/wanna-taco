@@ -17,7 +17,7 @@ const MelpMap = () => {
   }
 
   return (
-    <Map center={[23.63, -102.55]} zoom={6} maxZoom={18}>
+    <Map center={[19.43277, -99.13305]} zoom={15} maxZoom={18}>
       <TileLayer
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

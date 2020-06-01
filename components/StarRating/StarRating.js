@@ -1,28 +1,30 @@
 import { Fragment } from 'react';
 
-const StarRating = ({ rating }) => {
+const StarRating = ({ rating, id }) => {
   const rateArr = [1, 2, 3, 4, 5];
+  const isChecked = rate => (rate <= rating ? true : false);
 
   return (
-    <Fragment>
+    <div className='star-rating'>
       {rateArr.map(rate => (
-        <label key={`star-${rate}`} for={`star-${rate}`} title={`${rate}-stars`}>
+        <Fragment>
           <input
-            id={`star-${rate}`}
+            id={`${id}-star${rate}`}
             type='radio'
             name='rating'
-            value={`star-${rate}`}
-            {...(rating === rate ? 'checked' : '')}
+            value={`${id}-star${rate}`}
+            checked={isChecked(rate)}
           />
-          <i className='active fa fa-star' aria-hidden='true'></i>
-        </label>
+          <label key={`${id}-star${rate}`} for={`${id}-star${rate}`} title={`${rate}-stars`}>
+            <i className='active fa fa-star' aria-hidden='true'></i>
+          </label>
+        </Fragment>
       ))}
       <style jsx>
         {`
           .star-rating {
             direction: rtl;
-            display: inline-block;
-            padding: 20px;
+            display: block;
           }
 
           .star-rating input[type='radio'] {
@@ -45,7 +47,7 @@ const StarRating = ({ rating }) => {
           }
         `}
       </style>
-    </Fragment>
+    </div>
   );
 };
 

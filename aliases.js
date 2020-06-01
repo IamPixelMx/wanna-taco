@@ -5,6 +5,7 @@ const alias = {
   components: `${root}/components`,
   pages: `${root}/pages`,
   redux: `${root}/redux`,
+  styles: `${root}/styles`,
   theme: `${root}/theme`,
   utils: `${root}/utils`,
   'jest-factories': `${root}/jest/factories`,

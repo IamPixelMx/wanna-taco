@@ -9,6 +9,7 @@ import retinaIcon from 'leaflet/dist/images/marker-icon-2x.png';
 import { StarRating } from 'components';
 
 const PopupMarker = ({
+  id,
   name,
   contact: { phone, site },
   address: { street, city, state, location },
@@ -35,13 +36,15 @@ const PopupMarker = ({
         <p>
           <b>Dirección</b>
         </p>
-        <p>📍&nbsp;{` ${street}, ${city}, ${state}`}</p>
+        <p>
+          📍&nbsp;{` ${street}, ${city},`} <br /> &nbsp; &nbsp; &nbsp; {state}
+        </p>
         <p> 📞 &nbsp; {phone}</p>
         <p> 🌐 &nbsp; {site}</p>
-        <p>
-          <b>Rating</b>
-        </p>
-        <StarRating {...rating} />
+        <br />
+        <strong>Rating</strong>
+        <br />
+        <StarRating id={id} rating={rating} />
       </Popup>
     </Marker>
   );
