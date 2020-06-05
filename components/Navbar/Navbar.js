@@ -65,7 +65,7 @@ const Navbar = ({ activeRoute }) => {
               }}
             >
               <hr className='navbar-divider' />
-              <a className='navbar-link' href={activeRoute === '/' ? '#home' : '/'}>
+              <a className='navbar-link' href={activeRoute === '/map' ? '/' : false}>
                 Comida
               </a>
               <div className='navbar-dropdown is-right'>
@@ -75,7 +75,9 @@ const Navbar = ({ activeRoute }) => {
                     className={
                       activeCategorie === categorie ? 'navbar-item is-active' : 'navbar-item'
                     }
-                    onClick={() => dispatch({ type: SET_ACTIVE_CATEGORIE, payload: categorie })}
+                    onClick={() => {
+                      dispatch({ type: SET_ACTIVE_CATEGORIE, payload: categorie });
+                    }}
                   >
                     {label}
                   </a>

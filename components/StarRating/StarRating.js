@@ -5,10 +5,11 @@ const StarRating = ({ rating, id }) => {
   const isChecked = rate => (rate <= rating ? true : false);
 
   return (
-    <div className='star-rating'>
+    <div key={`${id}-rating`} className='star-rating'>
       {rateArr.map(rate => (
         <Fragment>
           <input
+            key={`${id}-star${rate}`}
             id={`${id}-star${rate}`}
             type='radio'
             name='rating'
@@ -20,33 +21,6 @@ const StarRating = ({ rating, id }) => {
           </label>
         </Fragment>
       ))}
-      <style jsx>
-        {`
-          .star-rating {
-            direction: rtl;
-            display: block;
-          }
-
-          .star-rating input[type='radio'] {
-            display: none;
-          }
-
-          .star-rating label {
-            color: #bbb;
-            font-size: 18px;
-            padding: 0;
-            cursor: pointer;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-          }
-
-          .star-rating label:hover,
-          .star-rating label:hover ~ label,
-          .star-rating input[type='radio']:checked ~ label {
-            color: #f2b600;
-          }
-        `}
-      </style>
     </div>
   );
 };

@@ -1,7 +1,7 @@
-/******************** Melp *******************/
+/******************** Wanna Taco *******************/
 
 export const TITLES = {
-  '/': ' Melp',
-  '/home': ' Melp',
-  '/map': ' Melp | Mapa',
+  '/': ' Wanna Taco de Melp',
+  '/home': ' Wanna Taco de Melp',
+  '/map': ' Wanna Taco | Mapa',
 };

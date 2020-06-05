@@ -34,7 +34,13 @@ const SortDropdrown = () => {
   };
 
   return (
-    <div className={isDropOpen ? 'dropdown is-left is-active' : 'dropdown is-left'}>
+    <div
+      className={
+        isDropOpen
+          ? 'dropdown is-left has-margin-bottom is-active'
+          : 'dropdown is-left has-margin-bottom'
+      }
+    >
       <div className='dropdown-trigger' onClick={toggleDrop}>
         <button
           className='button is-rounded is-medium is-outlined is-info is-light'
