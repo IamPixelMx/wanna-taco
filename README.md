@@ -17,7 +17,7 @@
   <h3 align="center">Wanna Taco !?</h3>
 
   <p align="center">
-App de Melp que brinda información de los sitios culinarios con más sabor y estilo   <br />
+App de Melp que brinda información de los restauratne con más sabor y estilo   <br />
     <a href="https://github.com/eriika19/wanna-taco/tree/master/components"><strong>Explorar proyecto »</strong></a>
     <br />
     <br />
@@ -29,7 +29,7 @@ App de Melp que brinda información de los sitios culinarios con más sabor y es
   <br />
 </p>
  
- <h3 align="center"> Next. js, Redux-Saga, Bulma, Emotion, Axios, Express, Jest, Babel, Eslint, Lint-staged</h3>
+ <h3 align="center"> Next. js, Redux-Saga, Bulma, Axios, Express, Jest, Babel, Eslint, Lint-staged</h3>
 
  <br />
 
@@ -46,9 +46,13 @@ App de Melp que brinda información de los sitios culinarios con más sabor y es
 
 ## Acerca del proyecto 🚀
 
-Esta aplicación se desarrollo para brindar información actualizada de los mejores los restaurantes.
-Se puede realizar búsqueda por tipo de comida, precio, puntuación, etc. Se consumió la API de Melp
-implementando solicitudes Axios.
+Esta aplicación se desarrollo para brindar información actualizada de los mejores los
+restaurantes.Se puede realizar búsqueda por tipo de comida, orden alfabètico y puntuación.
+
+Se consumió el dataset de Melp implementando solicitudes Axios y se construyó un mapa interactivo
+que muestra la ubicación exacta de todos los restaurantes, de dicho dataset, dentro del mapa
+interactivo. Al dar clic en cada icono de ubicación se despliga un pop up la información más
+relevante del restaurante en dicha localización
 
  <br />
 

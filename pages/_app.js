@@ -8,8 +8,10 @@ import withRedux from 'next-redux-wrapper';
 import withReduxSaga from 'next-redux-saga';
 // Configfuration for redux store
 import configureStore from 'redux/configureStore';
-// Bulma CSS
+// Bulma css
 import 'bulma/css/bulma.min.css';
+// Custom css
+import 'styles/styles.css';
 // Tab Titles
 import { TITLES as titles } from 'utils';
 import { Footer, TitleTab } from 'components';

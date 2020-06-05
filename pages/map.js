@@ -8,7 +8,9 @@ const MapPage = () => {
       <Fade left>
         <section id='map-page' className={'padding-top section .m-t-xxl'}>
           <div className='container'>
-            <h5 className='subtitle is-4 is-spaced'>Encuentra tu restaurante más cercano </h5>
+            <h5 className='subtitle is-4 is-spaced'>
+              Encuentra la info y ubicación de los mejores restaurantes en tu zona{' '}
+            </h5>
             <div className='content has-text-centered has-lg-margin-top'>
               <Map />
             </div>

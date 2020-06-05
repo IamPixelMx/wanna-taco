@@ -1,16 +1,11 @@
-import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { getActiveCategorie, getCategories } from '../../redux/selectors';
 
 import { Card } from 'components';
 
-const useForceUpdate = () => useState()[1];
-
 const getItemsToShow = array => (array.length > 15 ? array.slice(0, 15) : array);
 
 const Dashboard = () => {
-  const forceUpdate = useForceUpdate();
-
   const activeCategorie = useSelector(getActiveCategorie);
   const categories = useSelector(getCategories);
   const activeCategorieArr = categories[activeCategorie];

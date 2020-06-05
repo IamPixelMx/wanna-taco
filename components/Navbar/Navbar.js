@@ -56,7 +56,6 @@ const Navbar = ({ activeRoute }) => {
               />
             ))}
             <div
-              href='/'
               className={
                 isDropOpen ? 'navbar-item has-dropdown is-active' : 'navbar-item has-dropdown'
               }
@@ -66,7 +65,9 @@ const Navbar = ({ activeRoute }) => {
               }}
             >
               <hr className='navbar-divider' />
-              <a className='navbar-link'>Comida</a>
+              <a className='navbar-link' href={activeRoute === '/' ? '#home' : '/'}>
+                Comida
+              </a>
               <div className='navbar-dropdown is-right'>
                 {CATEGORIES_ITEMS.map(({ categorie, label }) => (
                   <a

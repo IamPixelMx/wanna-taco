@@ -29,9 +29,6 @@ const SortDropdrown = () => {
     if (dataToSort) {
       const sortedData = sortData(dataToSort, type);
       dispatch({ type: SET_SORTED_DATA, payload: { [activeCategorie]: sortedData } });
-      console.log('====================================');
-      console.log('Se realizo dispatch ', SET_SORTED_DATA, 'categories: ', categories);
-      console.log('====================================');
     }
     toggleDrop();
   };
@@ -46,7 +43,14 @@ const SortDropdrown = () => {
         >
           <span className='has-text-weight-bold'>Ordenar por&nbsp; </span>
           <span className='icon is-small'>
-            <i className='fa fa-arrow-circle-down has-text-info' aria-hidden='true'></i>
+            <i
+              className={
+                isDropOpen
+                  ? 'fa fa-arrow-circle-up has-text-info'
+                  : 'fa fa-arrow-circle-down has-text-info'
+              }
+              aria-hidden='true'
+            ></i>
           </span>
           <span className='has-text-weight-bold'> : </span>
         </button>

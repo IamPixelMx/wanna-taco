@@ -4,13 +4,7 @@ import Link from 'next/link';
 const NavbarItem = ({ route, page, activeRoute }) => {
   return (
     <Link href={route}>
-      <a
-        className={
-          route === activeRoute ? 'navbar-item is-nice-blue is-active' : 'navbar-item is-nice-blue'
-        }
-      >
-        {page}
-      </a>
+      <a className={route === activeRoute ? 'navbar-item is-active' : 'navbar-item'}>{page}</a>
     </Link>
   );
 };
